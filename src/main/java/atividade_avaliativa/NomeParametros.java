@@ -2,6 +2,7 @@ package atividade_avaliativa;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,16 +11,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class QualMeuNome
+ * Servlet implementation class NomeParametros
  */
-@WebServlet("/QualMeuNome")
-public class QualMeuNome extends HttpServlet {
+@WebServlet("/NomeParametros")
+public class NomeParametros extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public QualMeuNome() {
+    public NomeParametros() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,9 +31,18 @@ public class QualMeuNome extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter saida = response.getWriter();
 		saida.write("<HTML><BODY>");
-		saida.write("<a href=/atividade_avaliativa/MeuNome>Qual seu nome? </a>");
+		saida.write("os parametros recebidos pela requisição: <BR>");
+		
+		Enumeration<String> nomesParametros = request.getParameterNames();
+		while (nomesParametros.hasMoreElements()) {
+			saida.write(nomesParametros.nextElement().toString());
+			saida.write(", ");
+			
+		}
+		
+		
 		saida.write("</BODY></HTML>");
 		saida.close();
 	}
-
 }
+

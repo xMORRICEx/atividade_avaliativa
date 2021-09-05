@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class QualMeuNome
+ * Servlet implementation class saudaçãocustomizada
  */
-@WebServlet("/QualMeuNome")
-public class QualMeuNome extends HttpServlet {
+@WebServlet("/saudaçãocustomizada")
+public class saudaçãocustomizada extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public QualMeuNome() {
+    public saudaçãocustomizada() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -30,9 +30,8 @@ public class QualMeuNome extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter saida = response.getWriter();
 		saida.write("<HTML><BODY>");
-		saida.write("<a href=/atividade_avaliativa/MeuNome>Qual seu nome? </a>");
+		saida.write("Bem Vindo " +request.getParameter("nome")+("&nbsp;")+request.getParameter("sobrenome")+ "!!!");
 		saida.write("</BODY></HTML>");
 		saida.close();
 	}
-
 }
