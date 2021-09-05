@@ -14,13 +14,13 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class NomeParametros
  */
 @WebServlet("/NomeParametros")
-public class NomeParametros extends HttpServlet {
+public class parametros extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public NomeParametros() {
+    public parametros() {
         super();
         // TODO Auto-generated constructor stub
     }
