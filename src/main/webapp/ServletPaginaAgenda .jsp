@@ -12,7 +12,6 @@
 	<h>digite seu telefone: <h><input type="number" name ="telefone" />
 	<h>coloque sua data de nascimento: <h></h><input type="date" name ="data" />
 	<input type="submit" name ="Enviar" />
-
 </form>
 </body>
 </html>

@@ -34,6 +34,9 @@ public class ServletPaginaAgenda extends HttpServlet {
 		saida.write("suas informações foram gravadas... ");
 	/**pegando parametros**/
 		
+		saida.write(""+request.getParameter("nome")+("<p>"));
+		saida.write(""+request.getParameter("telefone")+("<p>"));
+		saida.write(""+request.getParameter("data")+("<p>"));
 		
 		
 		saida.write("</BODY></HTML>");
