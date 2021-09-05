@@ -30,7 +30,7 @@ public class MeuNome extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		PrintWriter saida = response.getWriter();
 		saida.write("<HTML><BODY>Seja Bem Vindo! ");
-		saida.write("Mauricio ");
+		saida.write("Mauricio&nbsp;");
 		saida.write("Brito");
 		saida.write("</BODY></HTML>");
 		saida.close();
