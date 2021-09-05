@@ -8,9 +8,9 @@
 </head>
 <body>
 <form action="saudaçãocustomizada" method="get">
-	<input type="text" name ="nome" />
-	<input type="text" name ="sobrenome" />
-	<input type="submit" value="Enviar" /> 
+	<h>digite seu nome: <h><input type="text" name ="nome" />
+	<h>digite seu sobrenome: <h><input type="text" name ="sobrenome" />
+	<input type="submit" value="Enviar" />
 	
 </form>
 </body>
